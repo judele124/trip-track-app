@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+a #root {
+  height: 100%;
+}
+
+img {
+  @apply size-full object-contain;
+}
+
+h1 {
+  @apply text-3xl font-bold;
+}
+
+h2 {
+  @apply text-2xl font-bold;
+}
+
+h3 {
+  @apply text-xl font-bold;
+}
+
+h4 {
+  @apply text-lg font-bold;
+}
+
+h5 {
+  @apply text-base font-bold;
+}
+
+h6 {
+  @apply text-sm font-bold;
+}
+
+button {
+  @apply rounded-2xl px-5 py-2;
+}
+
+input,
+textarea {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-text-fill-color: #19181e;
+    @apply text-dark shadow-[0_0_0_30px_#fff_inset];
+  }
+
+  @apply rounded-2xl px-5 py-3;
+}
+
+#root {
+  .dark {
+    input,
+    textarea {
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-text-fill-color: #ebe2d4;
+        @apply dark:shadow-[0_0_0_30px_#383644_inset];
+      }
+
+      @apply rounded-2xl px-5 py-2;
+    }
+  }
+}
+
+.page-x-padding {
+  @apply px-6;
+}
+
+.page-y-padding {
+  @apply py-4;
+}
+
+.page-padding {
+  @apply px-6 py-4;
+}
+
+.break-x-padding {
+  @apply -mx-6;
+}
+
+.page-colors {
+  @apply bg-light text-dark dark:bg-dark dark:text-light;
+}
+
+@keyframes stop-pulse {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.05;
+  }
+  100% {
+    scale: 1;
+  }
+  
+}
+
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
